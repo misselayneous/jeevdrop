@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --foreground-rgb: 41, 41, 41;
+  --background-rgb: 245, 245, 245;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Blood donation specific styles */
+.blood-drop {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #e53e3e;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  margin-right: 8px;
+}
+
+.blood-drop:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 50% 0;
+  background-color: #e53e3e;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-smoke py-2.5 px-5 rounded-none hover:bg-primary/90 transition-all text-sm uppercase tracking-wider font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-primary text-primary py-2.5 px-5 rounded-none hover:bg-primary hover:text-smoke hover:bg-opacity-5 transition-all text-sm uppercase tracking-wider font-medium;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-primary py-2.5 px-5 rounded-none hover:bg-accent/90 transition-all text-sm uppercase tracking-wider font-medium;
+  }
+  
+  .event-card {
+    @apply p-5 rounded-none bg-white border-b border-primary/20 hover:border-primary transition-all;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border-b border-primary/20 focus:border-primary rounded-none bg-transparent focus:outline-none transition-all;
+  }
+  
+  .section-title {
+    @apply font-mono uppercase text-xs tracking-wider mb-2 text-stone;
+  }
+  
+  .page-title {
+    @apply text-4xl md:text-5xl font-normal tracking-tight;
+  }
+} 
