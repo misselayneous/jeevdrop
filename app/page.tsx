@@ -48,14 +48,14 @@ export default function Home() {
                 title: "Williamsburg Weekend", 
                 date: "10.22",
                 location: "Berry St & N 7th",
-                features: ["DJ Sets", "Photo Booth", "Flash Tattoos"],
+                features: ["DJ Sets", "Photo Booth", "Free Coffee"],
                 special: false
               },
               { 
-                title: "Spotify x jeev", 
+                title: "Instacart x jeev", 
                 date: "10.28",
-                location: "Spotify HQ, Chelsea",
-                features: ["Exclusive Merch", "Live Music", "Free Coffee"],
+                location: "Instacart HQ, SoMa",
+                features: ["Corporate Social Impact Day", "Live Music", "Exclusive Merch"],
                 special: true
               },
             ].map((event, index) => (
@@ -131,7 +131,7 @@ export default function Home() {
               { 
                 number: "03",
                 title: "Reward", 
-                description: "Enjoy free coffee, exclusive merch, and optional tattoos."
+                description: "Enjoy free coffee, exclusive merch, and community perks."
               }
             ].map((step, index) => (
               <div key={index} className="relative">
