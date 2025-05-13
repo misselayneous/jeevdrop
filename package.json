@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "supabase:deploy": "supabase functions deploy email-webhook --project-ref xqjjrqeywreywyrstkmd"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
@@ -23,6 +24,7 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "postcss": "^8.4.33",
+    "supabase": "^2.22.12",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.0",
     "vercel": "^41.7.4"
