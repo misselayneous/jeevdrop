@@ -1,9 +1,10 @@
 import './globals.css'
-import React from 'react'
+import type { Metadata } from 'next'
+import Navbar from './components/Navbar'
 
-export const metadata = {
-  title: 'jeev - give blood your way',
-  description: 'join the gen z blood donation movement - a cultural moment, not a medical task.',
+export const metadata: Metadata = {
+  title: 'Jeev Drop - Blood Donation Made Accessible',
+  description: 'Bringing blood donation drives to communities without easy access to donation centers',
 }
 
 export default function RootLayout({
@@ -13,8 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-smoke font-sans">
-        {children}
+      <body>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   )
